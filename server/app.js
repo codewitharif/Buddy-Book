@@ -9,7 +9,7 @@ const cors = require("cors");
 const router = require("./routes/router");
 
 app.use(cors({
-  origin: 'https://buddy-book.vercel.app',
+  origin: ['https://buddy-book.vercel.app'],
   methods: ['GET', 'POST', 'PATCH', 'DELETE'],
   credentials: true,
 }));
