@@ -9,7 +9,7 @@ const cors = require("cors");
 const router = require("./routes/router");
 
 app.use(cors({
-    origin: 'https://buddybookz.netlify.app',
+    origin: 'https://buddy-book-client.vercel.app',
     methods: ["GET", "PATCH", "POST", "DELETE"],
     credentials: true,
 }));
