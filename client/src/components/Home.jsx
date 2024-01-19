@@ -32,7 +32,7 @@ const Home = () => {
   }, []);
 
   const deleteuser = async (id) => {
-    const res = await fetch(`https://buddy-book-server.vercel.app/delete/${id}`, {
+    const res = await fetch(`https://buddy-book-backend.vercel.app/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
