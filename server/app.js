@@ -10,7 +10,7 @@ const router = require("./routes/router");
 
 app.use(cors({
     origin: 'https://buddybookz.netlify.app',
-    methods: [GET,PATCH,POST,DELETE],
+    methods: ["GET", "PATCH", "POST", "DELETE"],
     credentials: true,
 }));
 app.use(express.json());
