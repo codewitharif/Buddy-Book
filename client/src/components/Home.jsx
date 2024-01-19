@@ -10,7 +10,7 @@ const Home = () => {
   const { updata, setUPdata } = useContext(updatedata);
   const { dltdata, setDLTdata } = useContext(deldata);
   const getdata = async (e) => {
-    const res = await fetch("https://buddy-book-server.vercel.app/getData", {
+    const res = await fetch("https://buddy-book-backend.vercel.app/getData", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
