@@ -10,7 +10,7 @@ const Detail = () => {
   console.log(getuserData);
   const { dltdata, setDLTdata } = useContext(deldata);
   const getdata = async (e) => {
-    const res = await fetch(`http://localhost:8003/getSinleUserData/${id}`, {
+    const res = await fetch(`https://buddy-book-server.vercel.app/getSinleUserData/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -26,7 +26,7 @@ const Detail = () => {
   }, []);
 
   const deleteuser = async (id) => {
-    const res = await fetch(`http://localhost:8003/delete/${id}`, {
+    const res = await fetch(`https://buddy-book-server.vercel.app/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
