@@ -10,7 +10,7 @@ const Home = () => {
   const { updata, setUPdata } = useContext(updatedata);
   const { dltdata, setDLTdata } = useContext(deldata);
   const getdata = async (e) => {
-    const res = await fetch("http://localhost:8003/getData", {
+    const res = await fetch("https://buddy-book-server.vercel.app/getData", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const Home = () => {
   }, []);
 
   const deleteuser = async (id) => {
-    const res = await fetch(`http://localhost:8003/delete/${id}`, {
+    const res = await fetch(`https://buddy-book-server.vercel.app/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
