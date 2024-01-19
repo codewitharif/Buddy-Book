@@ -1,5 +1,5 @@
 {
-  "version": 2.2,
+  "version": 3,
   "name": "buddy-book",
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
   "routes": [{ "src": "/(.*)", "dest": "/app.js" }]
