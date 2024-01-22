@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Create from "./components/Create";
 import Update from "./components/Update";
 import Detail from "./components/Detail";
+import Search from "./components/Search";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/create" element={<Create />} />
           <Route path="/update/:id" element={<Update />} />
           <Route path="/view/:id" element={<Detail />} />
+          <Route path="/search/:name" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </>

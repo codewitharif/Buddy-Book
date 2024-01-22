@@ -77,4 +77,22 @@ router.delete("/delete/:id", async (req, res) => {
   }
 });
 
+router.get("/:name", async (req, res) => {
+  const searchName = req.params.name; // Use req.params for route parameters
+  try {
+    const search = await crud.find({
+      name: { $regex: new RegExp(searchName, "i") },
+    });
+    console.log(search);
+    if (search.length === 0) {
+      // Check if the array is empty
+      res.status(404).json({ error: "No records exist" });
+    } else {
+      res.status(200).json(search);
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = router;
