@@ -8,7 +8,11 @@ const crud = require("./models/crudSchema");
 const cors = require("cors");
 const router = require("./routes/router");
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://buddy-book.vercel.app', 'https://buddybookz.netlify.app' ],
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  credentials: true,
+}));
 app.use(express.json());
 
 app.use(router);

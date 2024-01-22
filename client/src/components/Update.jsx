@@ -28,7 +28,7 @@ const Update = () => {
   const { id } = useParams("");
 
   const getdata = async (e) => {
-    const res = await fetch(`http://localhost:8003/getSinleUserData/${id}`, {
+    const res = await fetch(`https://buddy-book-backend.vercel.app/getSinleUserData/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ const Update = () => {
     e.preventDefault();
     const { name, age, email, work, mobile, add, desc } = inpval;
 
-    const res = await fetch(`http://localhost:8003/update/${id}`, {
+    const res = await fetch(`https://buddy-book-backend.vercel.app/update/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

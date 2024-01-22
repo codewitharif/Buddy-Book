@@ -27,7 +27,7 @@ const Create = () => {
   const addingdata = async (e) => {
     e.preventDefault();
     const { name, email, age, mobile, work, add, desc } = inpval;
-    const res = await fetch("http://localhost:8003/create", {
+    const res = await fetch("https://buddy-book-backend.vercel.app/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

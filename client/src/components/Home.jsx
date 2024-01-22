@@ -14,6 +14,18 @@ const Home = () => {
   const { udata, setUdata } = useContext(addata);
   const { updata, setUPdata } = useContext(updatedata);
   const { dltdata, setDLTdata } = useContext(deldata);
+<<<<<<< HEAD
+=======
+  const getdata = async (e) => {
+    const res = await fetch("https://buddy-book-backend.vercel.app/getData", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
+    console.log(data);
+>>>>>>> c621c0d771d9061dbb36a0ef52435aba14dc08f1
 
   const getdata = async () => {
     setLoading(true);
@@ -38,7 +50,7 @@ const Home = () => {
   }, []);
 
   const deleteuser = async (id) => {
-    const res = await fetch(`http://localhost:8003/delete/${id}`, {
+    const res = await fetch(`https://buddy-book-backend.vercel.app/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

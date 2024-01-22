@@ -17,7 +17,6 @@ function App() {
           <Route path="/create" element={<Create />} />
           <Route path="/update/:id" element={<Update />} />
           <Route path="/view/:id" element={<Detail />} />
-          <Route path="/search/:name" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </>
